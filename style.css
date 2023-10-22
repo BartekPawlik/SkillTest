@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+section .hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+  background-image: url(graphic/hero.png);
+  background-position: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section .hero-container .nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+section .hero-container .nav-container .logo-container img {
+  margin-top: 5px;
+  width: 13px;
+  height: 13px;
+}
+section .hero-container .nav-container .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .hero-container .nav-container .navigation ul {
+  display: flex;
+  list-style: none;
+}
+section .hero-container .nav-container .navigation ul li {
+  font-size: 0.3rem;
+  color: white;
+  margin-right: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+  border-color: white;
+}
+section .section-gap {
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section .section-gap .logo {
+  display: flex;
+  align-items: center;
+}
+section .section-gap .logo img {
+  height: 15px;
+  border: 1px solid rgba(180, 180, 180, 0.623);
+  border-radius: 50%;
+  margin-right: 2px;
+}
+section .section-gap .logo .title .losangeles-title {
+  font-size: 5px;
+  color: rgb(77, 75, 75);
+}
+section .section-gap .logo .title .mountains-title {
+  font-size: 6.5px;
+  color: rgba(41, 55, 100, 0.884);
+}
+section .section-gap .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .section-gap .navigation ul {
+  display: flex;
+  list-style: none;
+}
+section .section-gap .navigation ul li {
+  font-size: 0.3rem;
+  color: rgba(41, 55, 100, 0.884);
+  margin-right: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+  border-color: rgba(41, 55, 100, 0.884);
+}
+
+section {
+  width: 100%;
+  height: 25%;
+}
+section .history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section .history-container .img-container {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .history-container .img-container img {
+  width: 100%;
+  height: 100%;
+}
+section .history-container .history-description {
+  width: 60%;
+  height: 29%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 5%;
+  overflow: hidden;
+}
+section .history-container .history-description .title {
+  width: 30px;
+  position: relative;
+}
+section .history-container .history-description .title h1 {
+  font-size: 1.7rem;
+  position: relative;
+  height: 5%;
+  color: rgba(89, 101, 139, 0.884);
+}
+section .history-container .history-description .title h2 {
+  color: rgba(41, 55, 100, 0.884);
+  top: 40%;
+  left: 105%;
+  position: absolute;
+  font-size: 0.5rem;
+}
+section .history-container .history-description p {
+  margin-left: 15px;
+  width: 80%;
+  color: #000;
+  font-size: 0.5rem;
+}
+section .history-container .photo-container {
+  height: 21%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+section .history-container .photo-container img {
+  height: 33px;
+  margin: 2px;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */

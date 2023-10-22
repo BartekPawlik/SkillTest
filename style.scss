@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+@mixin sections{
+    
+        width: 100%;
+        height: 25%;
+    
+  
+}
+section{
+ 
+  
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 90%;
+        background-image: url(graphic/hero.png);
+        background-position: 60%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .nav-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .logo-container{
+               
+                img{
+                    margin-top: 5px;
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+            .navigation{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ul{
+                    display: flex;
+                    list-style: none;
+                    
+                 
+                    li{
+                        font-size: 0.3rem;
+                        color: white;
+                        margin-right: 10px;
+                        border-bottom: 1px solid #000;
+                        padding-bottom: 1px;
+                        border-color: white;
+    
+    
+                    }
+                }
+            }
+        }
+    
+      
+    }
+    .section-gap{
+        height: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo{
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            img{  
+                height: 15px;
+                border: 1px solid rgba(180, 180, 180, 0.623);
+                border-radius: 50%;
+                margin-right: 2px;
+             
+            }
+            .title{
+              .losangeles-title{
+                font-size: 5px;
+                color: rgb(77, 75, 75);
+              }
+              .mountains-title{
+                font-size: 6.5px;
+                color: rgba(41, 55, 100, 0.884);
+              }
+              
+            }
+        }
+        .navigation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                display: flex;
+                list-style: none;
+                
+             
+                li{
+                    font-size: 0.3rem;
+                    color: rgba(41, 55, 100, 0.884);
+                    margin-right: 10px;
+                    border-bottom: 1px solid #000;
+                    padding-bottom: 1px;
+                    border-color: rgba(41, 55, 100, 0.884);
+
+
+                }
+            }
+        }
+
+    }
+}
+// History section
+section{
+    @include sections;
+   
+    .history-container{
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .img-container{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+     
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+
+    .history-description{
+        width: 60%;
+        height: 29%;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 5%;
+        overflow: hidden;
+        .title{
+            width: 30px;
+           
+            position: relative;
+            h1{
+                font-size: 1.7rem;
+                position: relative;
+                height: 5%;
+                color:rgba(89, 101, 139, 0.884) ;
+            }
+            h2{
+                color: rgba(41, 55, 100, 0.884);
+                top: 40%;
+                left: 105%;
+                position: absolute;
+                font-size: 0.5rem;
+            }
+        }
+        p{
+            margin-left: 15px;
+            width: 80%;
+            color: #000;
+            font-size: 0.5rem;
+        }
+
+
+    }
+    .photo-container{
+        height: 21%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+       
+        img{
+           height: 33px;
+            margin: 2px;
+            object-position: top;
+            object-fit: contain;
+
+        }
+    }
+ 
+  }     
+  
+    
+
+
+}
+
+// @media 
+
+
+
+

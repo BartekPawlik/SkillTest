@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root{
+    --main-blue:rgba(41, 55, 100, 0.884)
+}
+
 
 body{
     width: 100%;
@@ -11,16 +15,16 @@ body{
     font-family: sans-serif;
 }
 @mixin sections{
-    
         width: 100%;
-        height: 25%;
+        height: 200px;
     
   
 }
 section{
  
-  
+
     .hero-container{
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -38,8 +42,7 @@ section{
             .logo-container{
                
                 img{
-                    margin-top: 5px;
-                    width: 13px;
+                    margin-top: 5px;               
                     height: 13px;
                 }
             }
@@ -74,8 +77,8 @@ section{
         justify-content: space-around;
         align-items: center;
         .logo{
+            position: relative;
             display: flex;
-            // justify-content: center;
             align-items: center;
             img{  
                 height: 15px;
@@ -90,8 +93,9 @@ section{
                 color: rgb(77, 75, 75);
               }
               .mountains-title{
-                font-size: 6.5px;
-                color: rgba(41, 55, 100, 0.884);
+                font-size: 5.8px;
+
+                color: var(--main-blue);
               }
               
             }
@@ -106,12 +110,13 @@ section{
                 
              
                 li{
+                    font-weight: 600;
                     font-size: 0.3rem;
                     color: rgba(41, 55, 100, 0.884);
                     margin-right: 10px;
                     border-bottom: 1px solid #000;
                     padding-bottom: 1px;
-                    border-color: rgba(41, 55, 100, 0.884);
+                    border-color: var(--main-blue);
 
 
                 }
@@ -120,7 +125,8 @@ section{
 
     }
 }
-// History section
+
+// History Section
 section{
     @include sections;
    
@@ -135,12 +141,13 @@ section{
     .img-container{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+      
 
      
         img{
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -157,17 +164,15 @@ section{
         top: 5%;
         overflow: hidden;
         .title{
-            width: 30px;
-           
+            width: 30px;         
             position: relative;
             h1{
                 font-size: 1.7rem;
-                position: relative;
                 height: 5%;
                 color:rgba(89, 101, 139, 0.884) ;
             }
             h2{
-                color: rgba(41, 55, 100, 0.884);
+                color: var(--main-blue);
                 top: 40%;
                 left: 105%;
                 position: absolute;
@@ -181,9 +186,11 @@ section{
             font-size: 0.5rem;
         }
 
-
+       
     }
     .photo-container{
+        width: 100%;
+        background-color: rgba(80, 93, 129, 0.8);
         height: 21%;
         display: flex;
         justify-content: center;
@@ -197,7 +204,7 @@ section{
         text-align: center;
        
         img{
-           height: 33px;
+            height: 27px;
             margin: 2px;
             object-position: top;
             object-fit: contain;
@@ -212,8 +219,739 @@ section{
 
 }
 
-// @media 
+// CLIMB SECTION
+section{
+    @include sections;
+    .title-container{
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
+        height: 20%;
+
+
+        .title{
+            display: flex;
+            position: relative;
+            margin-right: 25px;
+
+            h1{
+                font-size: 1.7rem;
+                height: 5%;
+                color:rgba(89, 101, 139, 0.884) ;
+            }
+            h2{
+                color: var(--main-blue);          
+                position: absolute;
+                bottom: 10px;
+                left: 32px;
+                font-size: 0.5rem;
+            }
+        }
+        p{
+            font-size: 0.5rem;
+        }
+    }
+    .mountain-container{
+        width: 100%;
+        height: 8%;
+        background-color: var(--main-blue);
+        .mountian-switch{
+            height: 100%;
+            margin-left: 20%;
+            display: flex;
+            align-items: center;
+            .mountain-button{
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                margin-left: 5px;
+                height: 100%;
+                color: #b9b7b7;
+                background-color:inherit;
+                outline: none;
+                border: none;
+                font-size: 6px;
+                padding: 0px 5px;
+                cursor: pointer;
+            }
+            .first{
+                background-color: #b9b7b7;
+                color:var(--main-blue) ;
+                text-decoration: underline;
+            }
+
+        }
+
+
+    }
+    .climb-container{
+        width: 100%;
+        height: 77%;
+        .shedule-container{
+            .title{
+                color: var(--main-blue);
+                font-size: 0.4rem;
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+            position: absolute;
+            top: 13%;
+            left: 12%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4px;
+
+            // width: 100px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.5);
+            .desc{
+                display: flex;
+                flex-direction: column;
+                .info{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.4rem;
+                    .month{
+                        margin-right: 5px;
+                    }
+                }
+                .nov-28,
+                .dec-18{
+                    margin-bottom: 4px;
+                }
+
+            }
+
+        }
+    .img-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+      
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+        }
+    }
+
+
+    }
+
+    .footer{
+        width: 100%;
+        height: 12%;
+        background-color: var(--main-blue);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 14px;
+                margin-right: 2px;
+                
+            }
+            .brand{
+                .losangeles-title{
+                    font-size: 6px;
+                    color: #5d6796;
+      
+                  }
+                  .mountains-title{
+                    font-size: 6.8px;
+                    color: #5d6796;
+      
+                  }
+            }
+      
+            
+          }
+          .copy-right{
+            p{
+                font-style: oblique;
+                font-size: 0.24rem;
+                color: #5d6796;
+            }
+          }
+
+    }
+}
+
+// section height
+
+@media (min-width:425px){
+ 
+    section{
+        height: 290px;
+        .history-container{
+            .photo-container{
+                img{
+                    height: 45px;
+                }
+            }
+        }
+    }
+  
+   
+
+}
+
+// Tablet
+
+@media (min-width:700px){
+    section{
+       height: 420px;
+
+       .hero-container{
+        .nav-container{
+            .logo-container{
+                img{
+                    height: 20px;
+                }
+            }
+            .navigation{
+                ul{
+                    li{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+       }
+       .section-gap{
+        .logo{
+            img{
+                height: 30px ;
+            }
+            .title{
+                .losangeles-title{
+                    font-size: 13px;
+                }
+                .mountains-title{
+                    font-size: 15px;
+                }
+            }
+        }
+        .navigation{
+            ul{
+                li{
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+       }
+    }
+    section{
+        .history-container{
+            .history-description{
+                .title{
+                    h1{
+                        font-size: 3rem;
+                    }
+                    h2{
+                        left: 57px;
+                        font-size: 0.9rem;
+                    }
+                  
+                }
+                P{
+                    font-size: 0.6rem;
+                }
+            }
+            .photo-container{
+                img{
+                  
+                    height: 70px;
+                }
+            }
+        }
+    }
+    section{
+        .title-container{
+            .title{
+                h1{
+                    font-size: 3rem;
+                    margin-right: 20px;
+
+                }
+                h2{
+                    left: 57px;
+                    top: 22px;
+                    font-size: 0.9rem;
+                }
+            }
+            p{
+                font-size: 0.9rem;
+            }
+        }
+        .mountain-container{
+            .mountian-switch{
+                .mountain-button{
+                    font-size: 10px;
+                }
+
+            }
+        }
+        .climb-container{
+            .shedule-container{
+                height: 120px;
+                .title{
+                    font-size: 15px;
+                }
+                .desc{
+                    padding: 5px;
+                    .info{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .footer{
+            .title{
+                img{
+                    height: 30px;
+                }
+                .brand{
+                    .losangeles-title{
+                        font-size: 13px;
+                    }
+                    .mountains-title{
+                        font-size: 15px;
+                    }
+                }
+
+            }
+            .copy-right{
+                p{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+
+    }
+}
+
+// Descop
+
+@media (min-width:890px){
+    section{
+       height: 600px;
+
+       .hero-container{
+        .nav-container{
+            .logo-container{
+                img{
+                    height: 20px;
+                }
+            }
+            .navigation{
+                ul{
+                    li{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+       }
+       .section-gap{
+        .logo{
+            img{
+                height: 30px ;
+            }
+            .title{
+                .losangeles-title{
+                    font-size: 13px;
+                }
+                .mountains-title{
+                    font-size: 15px;
+                }
+            }
+        }
+        .navigation{
+            ul{
+                li{
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+       }
+    }
+    section{
+        .history-container{
+            .history-description{
+                .title{
+                    h1{
+                        font-size: 3rem;
+                    }
+                    h2{
+                        left: 57px;
+                        font-size: 0.9rem;
+                    }
+                  
+                }
+                P{
+                    font-size: 0.6rem;
+                }
+            }
+            .photo-container{
+                img{
+                  
+                    height: 70px;
+                }
+            }
+        }
+    }
+    section{
+        .title-container{
+            .title{
+                h1{
+                    font-size: 3rem;
+                    margin-right: 20px;
+
+                }
+                h2{
+                    left: 57px;
+                    top: 22px;
+                    font-size: 0.9rem;
+                }
+            }
+            p{
+                font-size: 0.9rem;
+            }
+        }
+        .mountain-container{
+            .mountian-switch{
+                .mountain-button{
+                    font-size: 10px;
+                }
+
+            }
+        }
+        .climb-container{
+            .shedule-container{
+                height: 120px;
+                .title{
+                    font-size: 15px;
+                }
+                .desc{
+                    padding: 5px;
+                    .info{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .footer{
+            .title{
+                img{
+                    height: 30px;
+                }
+                .brand{
+                    .losangeles-title{
+                        font-size: 13px;
+                    }
+                    .mountains-title{
+                        font-size: 15px;
+                    }
+                }
+
+            }
+            .copy-right{
+                p{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+
+    }
+}
 
 
 
 
+
+ 
+ // Descop
+ 
+ @media (min-width:890px){
+     section{
+ 
+        .hero-container{
+         .nav-container{
+             .logo-container{
+                 img{
+                     height: 20px;
+                 }
+             }
+             .navigation{
+                 ul{
+                     li{
+                         font-size: 0.6rem;
+                     }
+                 }
+             }
+         }
+        }
+        .section-gap{
+         .logo{
+             img{
+                 height: 30px ;
+             }
+             .title{
+                 .losangeles-title{
+                     font-size: 13px;
+                 }
+                 .mountains-title{
+                     font-size: 15px;
+                 }
+             }
+         }
+         .navigation{
+             ul{
+                 li{
+                     font-weight: 600;
+                     font-size: 0.8rem;
+                 }
+             }
+         }
+        }
+     }
+     section{
+         .history-container{
+             .history-description{
+                 .title{
+                     h1{
+                         font-size: 3rem;
+                     }
+                     h2{
+                         left: 57px;
+                         font-size: 0.9rem;
+                     }
+                   
+                 }
+                 P{
+                     font-size: 0.6rem;
+                 }
+             }
+             .photo-container{
+                 img{
+                   
+                     height: 70px;
+                 }
+             }
+         }
+     }
+     section{
+         .title-container{
+             .title{
+                 h1{
+                     font-size: 3rem;
+                     margin-right: 20px;
+ 
+                 }
+                 h2{
+                     left: 57px;
+                     top: 22px;
+                     font-size: 0.9rem;
+                 }
+             }
+             p{
+                 font-size: 0.9rem;
+             }
+         }
+         .mountain-container{
+             .mountian-switch{
+                 .mountain-button{
+                     font-size: 10px;
+                 }
+ 
+             }
+         }
+         .climb-container{
+             .shedule-container{
+                 height: 120px;
+                 .title{
+                     font-size: 15px;
+                 }
+                 .desc{
+                     padding: 5px;
+                     .info{
+                         font-size: 12px;
+                     }
+                 }
+             }
+         }
+         .footer{
+             .title{
+                 img{
+                     height: 30px;
+                 }
+                 .brand{
+                     .losangeles-title{
+                         font-size: 13px;
+                     }
+                     .mountains-title{
+                         font-size: 15px;
+                     }
+                 }
+ 
+             }
+             .copy-right{
+                 p{
+                     font-size: 0.6rem;
+                 }
+             }
+         }
+ 
+     }
+}
+
+
+@media only screen and (min-width: 1280px){
+    section{
+        height: 970px;
+
+ 
+        .hero-container{
+         .nav-container{
+             .logo-container{
+                 img{
+                     height: 20px;
+                 }
+             }
+             .navigation{
+                 ul{
+                     li{
+                         font-size: 0.6rem;
+                     }
+                 }
+             }
+         }
+        }
+        .section-gap{
+         .logo{
+             img{
+                 height: 30px ;
+             }
+             .title{
+                 .losangeles-title{
+                     font-size: 13px;
+                 }
+                 .mountains-title{
+                     font-size: 15px;
+                 }
+             }
+         }
+         .navigation{
+             ul{
+                 li{
+                     font-weight: 600;
+                     font-size: 0.8rem;
+                 }
+             }
+         }
+        }
+     }
+     section{
+         .history-container{
+             .history-description{
+                 .title{
+                     h1{
+                         font-size: 3rem;
+                     }
+                     h2{
+                         left: 57px;
+                         font-size: 0.9rem;
+                     }
+                   
+                 }
+                 P{
+                     font-size: 0.6rem;
+                 }
+             }
+             .photo-container{
+                 img{
+                   
+                     height: 70px;
+                 }
+             }
+         }
+     }
+     section{
+         .title-container{
+             .title{
+                 h1{
+                     font-size: 3rem;
+                     margin-right: 20px;
+ 
+                 }
+                 h2{
+                     left: 57px;
+                     top: 22px;
+                     font-size: 0.9rem;
+                 }
+             }
+             p{
+                 font-size: 0.9rem;
+             }
+         }
+         .mountain-container{
+             .mountian-switch{
+                 .mountain-button{
+                     font-size: 10px;
+                 }
+ 
+             }
+         }
+         .climb-container{
+             .shedule-container{
+                 height: 120px;
+                 .title{
+                     font-size: 15px;
+                 }
+                 .desc{
+                     padding: 5px;
+                     .info{
+                         font-size: 12px;
+                     }
+                 }
+             }
+         }
+         .footer{
+             .title{
+                 img{
+                     height: 30px;
+                 }
+                 .brand{
+                     .losangeles-title{
+                         font-size: 13px;
+                     }
+                     .mountains-title{
+                         font-size: 15px;
+                     }
+                 }
+ 
+             }
+             .copy-right{
+                 p{
+                     font-size: 0.6rem;
+                 }
+             }
+         }
+ 
+     }
+ }
